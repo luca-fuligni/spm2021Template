@@ -15,6 +15,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 class MyWebappSeleniumAcceptanceTest {
 
@@ -25,6 +26,7 @@ class MyWebappSeleniumAcceptanceTest {
 	static String address;
 	
 	static WebDriver driver;
+	public String baseUrl = "https://www.lambdatest.com/";
 	
 	/**
 	 * @throws java.lang.Exception
@@ -49,18 +51,32 @@ class MyWebappSeleniumAcceptanceTest {
 	@BeforeEach
 	void setUp() throws Exception {
 		
-		if(System.getProperty("os.name").equals("Mac OS X")) {
+
+		/*if(System.getProperty("os.name").equals("Mac OS X")) {
 		System.setProperty("webdriver.chrome.driver", projectPath+"/drivers/mac/chromedriver");
 		address="http://localhost:8080/spm2021";
 		}
 		if(System.getProperty("os.name").contains("Windows")) {
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\studente\\Documents\\BrowserDriver\\chromedriver.exe");
 			address="http://localhost/spm2021";
-		}
+		}*/
+		
 	    
 		ChromeOptions chromeOptions = new ChromeOptions();
 		driver = new ChromeDriver(chromeOptions);
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	    
+	    WebDriverManager.chromedriver().setup();
+	    ChromeOptions options = new ChromeOptions();
+	    options.addArguments("--no-sandbox");
+	    options.addArguments("--disable-dev-shm-usage");
+	    options.addArguments("--headless");
+	    driver = new ChromeDriver(options);
+	    
+	    driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);  
+	    driver.manage().window().maximize();  
+	    driver.get(baseUrl);
+	    driver.close();
 	}
 
 	/**
