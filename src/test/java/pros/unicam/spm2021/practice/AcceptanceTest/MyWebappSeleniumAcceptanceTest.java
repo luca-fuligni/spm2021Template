@@ -99,12 +99,12 @@ class MyWebappSeleniumAcceptanceTest {
 	}
 	
 	@Test
-	//@Disabled
+	@Disabled
 	@Tag("AcceptanceTest")
 	void testMyGitHubAction() {
 		  driver.get(baseUrl);
 	      System.out.println("Title is: "+driver.getTitle());
-	      //assertTrue(driver.getTitle().contains("LambdaTest"));
+	      assertTrue(driver.getTitle().contains("LambdaTest"));
 	}
 
 }
