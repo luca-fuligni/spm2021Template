@@ -11,7 +11,7 @@ You can git clone it and import it as a Maven project.
 https://shields.io
 
 [Jenkins]
-[![Build Status](http://proslabtest.unicam.it/jenkins/job/SPM2021/badge/icon)](http://proslabtest.unicam.it/jenkins/job/SPM2021/)
+[![Build Status](http://proslabtest.unicam.it/jenkins/buildStatus/icon?job=SPM2021)](http://proslabtest.unicam.it/jenkins/job/SPM2021/)
 
 [Travis CI]
 [![Build Status](https://travis-ci.org/FabrizioFornari/SPM2021.svg?branch=main)](https://travis-ci.org/FabrizioFornari/SPM2021)
