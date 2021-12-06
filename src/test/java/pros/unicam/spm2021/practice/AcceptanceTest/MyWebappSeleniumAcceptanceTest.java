@@ -59,12 +59,12 @@ class MyWebappSeleniumAcceptanceTest {
 		if(System.getProperty("os.name").contains("Windows")) {
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\studente\\Documents\\BrowserDriver\\chromedriver.exe");
 			address="http://localhost/spm2021";
-		}*/
+		}
 		
 	    
 		ChromeOptions chromeOptions = new ChromeOptions();
 		driver = new ChromeDriver(chromeOptions);
-	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);*/
 	    
 	    WebDriverManager.chromedriver().setup();
 	    ChromeOptions options = new ChromeOptions();
