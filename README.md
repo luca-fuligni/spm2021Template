@@ -14,4 +14,4 @@ https://shields.io
 [![Build Status](http://proslabtest.unicam.it/jenkins/buildStatus/icon?job=SPM2021)](http://proslabtest.unicam.it/jenkins/job/SPM2021/)
 
 [Travis CI]
-[![Build Status](https://travis-ci.org/FabrizioFornari/SPM2021.svg?branch=main)](https://travis-ci.org/FabrizioFornari/SPM2021)
+[![Build Status](https://app.travis-ci.com/FabrizioFornari/spm2021Template.svg?branch=master)](https://app.travis-ci.com/FabrizioFornari/spm2021Template)
