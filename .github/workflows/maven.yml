@@ -25,14 +25,14 @@ jobs:
         distribution: 'adopt'
         cache: maven
 
-    - name:  Install Google Chrome 
-      run: chrome --version
+    #- name:  Install Google Chrome 
+    #  run: chrome --version
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml test
 
     - name: Build and Push Docker Image
-      uses: mr-smithers-excellent/docker-build-push@v3
+      uses: mr-smithers-excellent/docker-build-push@v5
       with:
         image: fabriziofornari89/spm2021template
         registry: docker.io
