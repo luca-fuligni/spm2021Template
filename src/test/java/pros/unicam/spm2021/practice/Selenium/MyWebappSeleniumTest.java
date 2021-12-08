@@ -27,7 +27,7 @@ class MyWebappSeleniumTest {
 	static String address;
 	
 	static WebDriver driver;
-	public String baseUrl = "https://www.lambdatest.com/";
+	public String baseUrl = "http://pros.unicam.it/";
 	
 	/**
 	 * @throws java.lang.Exception
@@ -105,7 +105,7 @@ class MyWebappSeleniumTest {
 	void testMyGitHubAction() {
 		  driver.get(baseUrl);
 	      System.out.println("Title is: "+driver.getTitle());
-	      assertTrue(driver.getTitle().contains("LambdaTest"));
+	      assertTrue(driver.getTitle().contains("PROS"));
 	}
 
 }
