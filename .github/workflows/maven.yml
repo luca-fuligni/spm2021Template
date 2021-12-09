@@ -25,8 +25,8 @@ jobs:
         distribution: 'adopt'
         cache: maven
 
-    #- name:  Install Google Chrome 
-    #  run: chrome --version
+    - name:  Install Google Chrome 
+      run: chrome --version
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml test
