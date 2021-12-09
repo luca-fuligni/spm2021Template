@@ -105,7 +105,7 @@ class MyWebappSeleniumTest {
 	void testMyGitHubAction() {
 		  driver.get(baseUrl);
 	      System.out.println("Title is: "+driver.getTitle());
-	      assertTrue(driver.getTitle().contains("PROS"));
+	      assertTrue(driver.getTitle().contains("12345678"));
 	}
 
 }
