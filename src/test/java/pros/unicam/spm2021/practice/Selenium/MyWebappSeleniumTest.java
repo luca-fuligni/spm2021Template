@@ -92,11 +92,11 @@ class MyWebappSeleniumTest {
 	
 	
 	@Test
-	@Disabled
+	//@Disabled
 	void testMyAppTitle() {
-		  driver.navigate().to(address);
+		  driver.navigate().to(baseUrl);
 	      System.out.println("Title is: "+driver.getTitle());
-	      assertTrue(driver.getTitle().contains("SPM"));
+	      assertTrue(driver.getTitle().contains("1234567"));
 	}
 	
 	@Test
@@ -105,7 +105,7 @@ class MyWebappSeleniumTest {
 	void testMyGitHubAction() {
 		  driver.get(baseUrl);
 	      System.out.println("Title is: "+driver.getTitle());
-	      assertTrue(driver.getTitle().contains("12345678"));
+	      assertTrue(driver.getTitle().contains("PROS"));
 	}
 
 }
